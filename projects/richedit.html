@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich-Edit Creative Services</title>
+  <meta name="description" content="Rich-Edit Creative Services — web design, video editing, motion graphics, graphic design and AI automation, based in Lagos, Nigeria.">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <style>
+    /* This project page has its own styles so it feels like a brand site,
+       separate from the student portfolio. */
+    @font-face {
+      font-family: "Fraunces";
+      src: url("../fonts/fraunces-bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Fraunces";
+      src: url("../fonts/fraunces-semibold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      src: url("../fonts/source-sans-regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Source Sans 3";
+      src: url("../fonts/source-sans-semibold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --navy: #0e1f2e;
+      --navy-soft: #173044;
+      --cream: #f6f1e8;
+      --gold: #c9a227;
+      --teal: #1aa38f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+      background: var(--navy);
+      color: var(--cream);
+      line-height: 1.65;
+    }
+
+    a { color: var(--gold); }
+
+    .back-bar {
+      padding: 0.7rem 1.25rem;
+      background: #0a1620;
+      font-size: 0.9rem;
+    }
+
+    .back-bar a { color: var(--cream); text-decoration: none; }
+    .back-bar a:hover { color: var(--gold); }
+
+    .wrap {
+      width: min(100% - 2rem, 68rem);
+      margin-inline: auto;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid rgba(246, 241, 232, 0.12);
+    }
+
+    .wordmark {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.01em;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .wordmark span { color: var(--gold); }
+
+    .brand-nav {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .brand-nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .brand-nav a:hover { color: var(--gold); }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 3.2rem 0 3.5rem;
+    }
+
+    .kicker {
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 0 0 0.8rem;
+    }
+
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(2.1rem, 6vw, 4.1rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 34rem;
+      font-size: 1.15rem;
+      color: #d5ddd8;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cta:hover { background: #e0b83a; }
+
+    .services {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      padding: 0 0 4rem;
+    }
+
+    .service {
+      border: 1px solid rgba(246, 241, 232, 0.12);
+      border-radius: 1rem;
+      padding: 1.2rem 1.25rem;
+      background: var(--navy-soft);
+    }
+
+    .service h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.25rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .service p { margin: 0; color: #c9d1cc; }
+
+    .brand-footer {
+      border-top: 1px solid rgba(246, 241, 232, 0.12);
+      padding: 1.4rem 0 2rem;
+      color: #9aa3ab;
+      font-size: 0.92rem;
+    }
+
+    @media (min-width: 48rem) {
+      .services { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 64rem) {
+      .services { grid-template-columns: repeat(3, 1fr); }
+      .hero { padding-top: 4.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <p class="back-bar"><a href="../projects.html">&larr; Back to the student portfolio</a></p>
+
+  <header class="wrap brand-header">
+    <a class="wordmark" href="richedit.html">Rich-<span>Edit</span></a>
+    <nav aria-label="Brand">
+      <ul class="brand-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="kicker">Lagos, Nigeria</p>
+        <h1>Creative work that helps a business show up clearly.</h1>
+        <p>Rich-Edit Creative Services is the studio of Richard Babalola. I design and build websites, edit video, create motion graphics and graphic design, and set up AI chatbots with Botpress.</p>
+        <a class="cta" href="../contact.html">Start a conversation</a>
+      </div>
+    </section>
+
+    <section class="wrap services" id="services" aria-label="Services">
+      <article class="service">
+        <h2>Web design and development</h2>
+        <p>Simple, clear websites built with HTML, CSS and JavaScript, made to work well on a phone.</p>
+      </article>
+      <article class="service">
+        <h2>Video editing</h2>
+        <p>Short promotional clips and edits in CapCut, ready to post or send to a client.</p>
+      </article>
+      <article class="service">
+        <h2>Motion graphics</h2>
+        <p>Simple motion pieces that introduce a name, an offer or a brand without a large production.</p>
+      </article>
+      <article class="service">
+        <h2>Graphic design</h2>
+        <p>Layouts and visuals in Canva for posts, flyers and other everyday brand materials.</p>
+      </article>
+      <article class="service">
+        <h2>AI automation</h2>
+        <p>Botpress chatbots that can answer common questions and collect orders on WhatsApp.</p>
+      </article>
+      <article class="service">
+        <h2>Based in Lagos</h2>
+        <p>I work from Akoka, Yaba, Lagos, and I want to keep growing this work with clients in Nigeria and internationally.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="wrap brand-footer">
+    <p>Rich-Edit Creative Services · Richard Babalola · Akoka, Yaba, Lagos, Nigeria</p>
+  </footer>
+</body>
+</html>
