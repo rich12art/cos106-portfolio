@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Planner | Richard Babalola — COS 106 Portfolio</title>
+  <meta name="description" content="An interactive academic planner that can add, complete and delete study tasks.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <span class="logo-mark" aria-hidden="true">RB</span>
+        <span class="logo-text">Richard Babalola</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="planner.html" class="active" aria-current="page">Academic Planner</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-intro container">
+      <p class="kicker">Student tools</p>
+      <h1>Academic Planner</h1>
+      <p class="lead prose">Add study tasks, mark them as complete when you finish them, and delete any you no longer need. Your list is saved in this browser, so it will still be here if you refresh the page.</p>
+    </header>
+
+    <section class="section container" aria-labelledby="planner-heading">
+      <h2 id="planner-heading" class="visually-hidden" >Task planner</h2>
+      <div class="planner-layout">
+        <form class="planner-form" id="planner-form" action="#" method="post">
+          <h3>Add a task</h3>
+          <div class="form-row">
+            <label for="task-title">Task title</label>
+            <input id="task-title" name="task-title" type="text" placeholder="For example, Finish the contact form" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <label for="task-course">Course or subject (optional)</label>
+            <input id="task-course" name="task-course" type="text" placeholder="For example, COS 106" autocomplete="off">
+          </div>
+          <p class="field-error" id="planner-error" role="alert"></p>
+          <button class="btn btn-primary" type="submit">Add task</button>
+        </form>
+
+        <div class="task-board">
+          <h3>Your tasks</h3>
+          <p class="task-summary" id="task-summary">No tasks yet. Add your first task using the form.</p>
+          <ul class="task-list" id="task-list"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="logo" href="index.html">
+          <span class="logo-mark" aria-hidden="true">RB</span>
+          <span class="logo-text">Richard Babalola</span>
+        </a>
+        <p class="footer-meta">Akoka, Yaba, Lagos, Nigeria</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Academic Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-meta">COS 106 Term Project · MIVA Open University · 2026</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
